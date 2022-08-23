@@ -3,6 +3,14 @@ body {
 	height: 100%;
 }
 
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: 400;
+	color: #262C27;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;

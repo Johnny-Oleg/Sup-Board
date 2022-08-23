@@ -1,17 +1,53 @@
 @font-face {
-	font-family: '', sans-serif;
-	src: url('../fonts/.woff2') format('woff2'),
-		url('../fonts/.woff') format('woff');
+	font-family: 'Comfortaa', cursive;
+	src: url('../fonts/Comfortaa-Regular.woff2') format('woff2'),
+		url('../fonts/Comfortaa-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: '', sans-serif;
-	src: url('../fonts/.woff2') format('woff2'),
-		url('../fonts/.woff') format('woff');
-	font-weight: 500;
+	font-family: 'Comfortaa', cursive;
+	src: url('../fonts/Comfortaa-Bold.woff2') format('woff2'),
+		url('../fonts/Comfortaa-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter', sans-serif;
+	src: url('../fonts/Inter-Light.woff2') format('woff2'),
+		url('../fonts/Inter-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter', sans-serif;
+	src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+		url('../fonts/Inter-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter', sans-serif;
+	src: url('../fonts/Inter-Bold.woff2') format('woff2'),
+		url('../fonts/Inter-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter', sans-serif;
+	src: url('../fonts/Inter-ExtraBold.woff2') format('woff2'),
+		url('../fonts/Inter-ExtraBold.woff') format('woff');
+	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
 }
