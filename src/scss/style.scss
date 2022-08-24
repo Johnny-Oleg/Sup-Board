@@ -1,11 +1,148 @@
-@use 'vars';
-@use 'fonts';
-@use 'normalize';
-@use 'libs';
-@use 'global';
-@use 'animations';
+@import 'normalize';
+@import 'global';
+@import 'vars';
+@import 'fonts';
+@import 'animations';
+@import 'libs';
 
-// font-family: 'Comfortaa', cursive;
+.header {
+	min-height: 100vh;
+	@include background('../images/header-bg.jpg');
+	margin-bottom: 80px;
+	position: relative;
+}
 
+.header::before {
+	content: '';
+	height: 456px;
+	@include background('../images/header-decor.svg');
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateY(35%);
+	z-index: 2;
+}
 
-@use 'media';
+.header::after {
+	content: '';
+	height: 456px;
+	@include background('../images/header-decor.svg');
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: translateY(75%) rotate(180deg);
+	z-index: 3;
+}
+
+.header__top {
+	@include flex(flex-end);
+	gap: 100px;
+	padding: 57px 0;
+	font-family: 'Comfortaa', cursive;
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: 700;
+}
+
+.logo path {
+	transition: fill .3s ease;
+}
+
+.logo:hover path {
+	fill: $teal;
+	transition: fill .3s ease;
+}
+
+.header__btn {
+	padding: 12px 71px;
+	background-color: $black;
+	color: $white;
+	border: none;
+	text-transform: uppercase;
+}
+
+.header__content {
+	min-height: calc(100vh - 161px);
+	@include flex(flex-end);
+	position: relative;
+}
+
+.header__content-box {
+	max-width: 550px;
+	margin-right: 30px;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 700;
+	color: $white;
+}
+
+.header__title {
+	font-size: 64px;
+	line-height: 71px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.header__text {
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 27px;
+}
+
+.header__decor-text {
+	position: absolute;
+	bottom: 25px;
+	color: $teal
+}
+
+.header__decor-text--first {
+	right: 145px;
+	bottom: 120px;
+	z-index: 1;
+}
+
+.header__decor-text--first,
+.header__decor-text--second {
+	font-family: 'Comfortaa', cursive;
+	font-size: 130px;
+	line-height: 145px;
+	opacity: 0.3;
+}
+
+.header__decor-text--second {
+	bottom: 0;
+	left: 265px;
+	z-index: 4;
+}
+
+.header__decor-text--third {
+	max-width: 360px;
+	right: 145px;
+	font-size: 32px;
+	line-height: 39px;
+	font-weight: 300;
+	font-style: italic;
+	text-align: center;
+	z-index: 4;
+}
+
+.info {
+	@include background('../images/info-bg.jpg');
+	position: relative;
+}
+
+.info::before {
+	content: '';
+	height: 130px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: $black;
+	transform: translateY(-120px);
+	z-index: 1;
+}
+
+@import 'media';
