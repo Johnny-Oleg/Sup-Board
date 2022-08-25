@@ -1,22 +1,68 @@
-- let list = {'BOARD': 'RAY AIR POCKET 11\'6"X31"', 'VOLUME': '299 L', 'WIDTH': '31" / 78.7 CM', 'LENGTH': '11\'6\'\' / 350.5 CM', 'THICKNESS': '6” / 15 CM', 'WEIGHT': '8.5 KG', 'FITTINGS': '2X FCS FIN SYSTEM / 2 X 4.5" CLICK FIN', 'REC. USER WEIGHT': 'UP TO 100 KG', 'MASTFOOT INSERT': 'NO'}
+- let specList = {'BOARD': 'RAY AIR POCKET 11\'6"X31"', 'VOLUME': '299 L', 'WIDTH': '31" / 78.7 CM', 'LENGTH': '11\'6\'\' / 350.5 CM', 'THICKNESS': '6” / 15 CM', 'WEIGHT': '8.5 KG', 'FITTINGS': '2X FCS FIN SYSTEM / 2 X 4.5" CLICK FIN', 'REC. USER WEIGHT': 'UP TO 100 KG', 'MASTFOOT INSERT': 'NO'}
+
+- let buyList = {'CLICK FINS': 'Comes with two 4.5’’ Click Fins – no tools required – fit and remove in seconds', 'REDUCED DECK PAD': 'Reduced area deck pad in standing area to aid packing', 'BACKPACK': 'Compact Pocket backpack with easy entry zipper for board, paddle, pump and accessories (fits paddle and also regular pump)', 'TOURING SHAPE': 'Tried and tested shape based on our popular Ray Air 11’6’’', 'EXTREMELY PORTABLE': 'Extremely portable, the ultimate travel companion'}
+
+- let techList = ['First PVC rail layer ', 'Second PVC rail layer ', 'Thin diamond grooving split-pad', 'Strong Tarpaulin layer ', 'V-Drop Stitch core']
 
 main.main
 	section.info
 		.container
 			.info__inner
 				.info__top 
-					p.info__top-text
+					p.info__top-text.info__top-text--first
 						| After our well received Fly Air Pocket Edition we’re adding the respective touring iSUP  to our Range – the Ray Air Pocket Edition! The ultra travel-friendly touring iSUP is built in a tough but light construction that allows it to be packed into a backpack half the size of a regular iSUP.
-						button.popup__btn.info__btn
+						button.popup-btn.info__btn
 							include ../../images/play-btn.svg
 							span Play video
-					p.info__top-text.
+					p.info__top-text.info__top-text--second.
 						With a thinner deck pad and tough but flexible construction, the Ray Air Pocket Edition can be rolled and packed into a much narrower bag, making it extremely easy to store and transport. Based on our highly versatile Ray Air 11’6’’, the efficient shape is packed with volume - offering safe, stable paddling and superb glide – which makes it the perfect iSUP for everyone paddling some distance. With its minimal weight and dimensions nothing comes close the convenient handling of our Pocket Edition iSUPs!
-						#[img.info__top-img(src='../../images/sup-img.png' alt='image')]
+					img.info__top-img(src='../../images/sup-img.png' alt='image')
 				.info__specs 
-					h3.info__specs-title SPECS
+					h3.info__specs-title.title SPECS
 					ul.info__specs-list
-						each val, key in list
+						each val, key in specList
 							li.info__specs-item
 								p.info__specs-caption= key
 								p.info__specs-text= val
+
+	section.buy
+		.container 
+			.buy__inner
+				.buy__content
+					h3.buy__title.title RAY AIR POCKET
+					ul.buy__list
+						each val, key in buyList
+							li.buy__item
+								p.buy__item-title= key
+								p.buy__item-text= val
+						.buy__price 590 €
+					button.buy__btn buy
+				img.buy__img(src='images/sup-img.jpg', alt='image')
+
+	section.tech
+		.tech__top
+			.container
+				.tech__top-inner
+					button.popup-btn.tech__btn
+							include ../../images/play-btn.svg
+							span Play video
+					.tech__top-box
+						h3.tech__title.title MICRO TECHNOLOGY
+						ol.tech__list
+							each item in techList
+								li.tech__list-item= item
+		.gallery
+			.container
+				.gallery__inner
+					.gallery__box
+						p.gallery__text.
+							Our new Micro technology provides a featherweight and quality construction that can be rolled and packed into a backpack half the width of a standard iSUP package. The reduced pad and our twin Click Fin system make it possible to have a regular sized iSUP packed into minimal space.
+						.gallery-min
+							img.gallery-min__img.gallery-min__img--first(src='images/gmin-1.jpg' alt='image')
+							img.gallery-min__img.gallery-min__img--second(src='images/gmin-2.jpg' alt='image')
+							img.gallery-min__img(src='images/gmin-3.jpg' alt='image')
+					.gallery-max
+						- for (var x = 1; x < 6; x++)
+							img.gallery-max__img(src='images/gmax-' + x + '.jpg' alt='image')
+						p.gallery-max__text ENJOY YOUR LIFE
+						img.gallery-max__img(src='images/gmax-6.jpg' alt='image')

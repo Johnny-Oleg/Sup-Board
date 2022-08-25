@@ -10,8 +10,8 @@
   padding: 0;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -35,13 +35,14 @@ p {
   margin: 0;
 }
 
-ul[class] {
+ul {
   list-style: none;
 }
 
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 input,
