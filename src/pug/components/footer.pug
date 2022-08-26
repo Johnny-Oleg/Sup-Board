@@ -1,0 +1,21 @@
+- let footerList = ['COPYRIGHT 2022', 'ALL RIGHTS RESERVED', 'COOKIE SETTINGS', 'PRIVACY STATEMENTS', ' CONTACT']
+
+footer.footer 
+	.container
+		.footer__inner
+			.footer__top
+				form.footer__form
+					h3.footer__title.title CONTACT US
+					input.footer__form-input(type='text' placeholder='NAME')
+					input.footer__form-input(type='text' placeholder='E-MAIL')
+					button.footer__form-btn(type='submit') SEND
+				a.footer__logo(href='#')
+					include ../../images/footer-logo.svg 
+			p.footer__social-title INSTAGRAM
+			.footer__gallery
+				- for (let i = 1; i < 5; i++)
+					img.footer__gallery-item(src='../../images/footer-img-' + i + '.jpg' alt='image')
+			ul.footer__menu-list
+				each item in footerList
+					li.footer__menu-item
+						a.footer__menu-link(href='#')= item

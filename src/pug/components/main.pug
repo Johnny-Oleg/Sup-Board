@@ -37,7 +37,7 @@ main.main
 								p.buy__item-text= val
 						.buy__price 590 €
 					button.buy__btn buy
-				img.buy__img(src='images/sup-img.jpg', alt='image')
+				img.buy__img(src='images/sup-img.jpg' alt='image')
 
 	section.tech
 		.tech__top
@@ -62,7 +62,10 @@ main.main
 							img.gallery-min__img.gallery-min__img--second(src='images/gmin-2.jpg' alt='image')
 							img.gallery-min__img(src='images/gmin-3.jpg' alt='image')
 					.gallery-max
-						- for (var x = 1; x < 6; x++)
-							img.gallery-max__img(src='images/gmax-' + x + '.jpg' alt='image')
-						p.gallery-max__text ENJOY YOUR LIFE
-						img.gallery-max__img(src='images/gmax-6.jpg' alt='image')
+						- for (let i = 1; i < 6; i++)
+							img.gallery-max__img(class='gmax__img--' + i src='images/gmax-' + i + '.jpg' alt='image')
+						p.gallery-max__text 
+							| ENJOY 
+							br 
+							| YOUR LIFE
+						img.gallery-max__img.gmax__img--6(src='images/gmax-6.jpg' alt='image')
