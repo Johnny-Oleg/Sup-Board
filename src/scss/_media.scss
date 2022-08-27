@@ -1,10 +1,57 @@
-@media (min-width: 1924px) {
-	
-}
-
 @media (max-width: 1230px) {
 	.header__decor-text--second {
 		left: 0;
+	}
+	.buy__inner {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.buy__img {
+		max-width: 100%;
+		order: -1;
+	}
+	.buy__content {
+		width: 100%;
+	}
+	.buy__price {
+		pointer-events: none;
+	}
+	.buy__item {
+		width: 100%;
+		max-width: 600px;
+	}
+	.gallery-max {
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: auto auto auto;
+	}
+	.gallery-max__img {
+		width: 100%;
+		align-self: stretch;
+	}
+}
+
+@media (max-width: 1175px) {
+	.gallery__box {
+		flex-wrap: wrap;
+	}
+	.gallery-min {
+		margin-top: 0;
+	}
+	.gallery__text {
+		width: 100%;
+	}
+	.gallery-min__img {
+		width: 100%;
+		align-self: stretch;
+	}
+	.gallery-min {
+		width: 100%;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: auto auto;
+	}
+	.footer__gallery-item {
+		width: 100%;
+		align-self: stretch;
 	}
 }
 
@@ -19,14 +66,49 @@
 		padding-top: 45px;
 		padding-bottom: 25px;
 	}
+	.info__top-img {
+		width: 227px;
+		display: block;
+		margin: 0 auto;
+	}
+	.info__specs {
+		display: block;
+	}
+	.footer__top {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.footer__logo {
+		display: inline-block;
+		order: -1;
+		margin: 0 auto 50px;
+	}
+	.footer__gallery {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	.footer__menu-list {
+		display: block;
+		text-align: center;
+	}
+	.footer__menu-item {
+		padding: 15px 0;
+	}
 }
 
-@media (max-width: 980px) {
-	
-}
-
-@media (max-width: 860px) {
-	
+@media (max-width: 840px) {
+	.buy__price {
+		top: -350px;
+		bottom: auto;
+	}
+	.gallery-min {
+		margin-bottom: 50px;
+	}
+	.gallery-max__text {
+		font-size: 18px;
+		line-height: 20px;
+	}
 }
 
 @media (max-width: 720px) {
@@ -41,10 +123,35 @@
 	.header__content-box {
 		margin-right: 0;
 	}
+	.tech__btn {
+		top: 40vh;
+		right: 50px;
+	}
 }
 
-@media (max-width: 640px) {
-	
+@media (max-width: 630px) {
+	.info__specs-list {
+		width: 100%;
+	}
+	.info__specs-item {
+		display: block;
+	}
+	.title {
+		font-size: 48px;
+		line-height: 56px;
+	}
+	.gallery-min {
+		padding: 20px 10px 20px;
+	}
+}
+
+@media (max-width: 500px) {
+	.buy__price {
+		width: 170px;
+		height: 168px;
+		background-size: cover;
+		top: -185px;
+	}
 }
 
 @media (max-width: 414px) {
@@ -54,6 +161,24 @@
 	.header__content {
 		z-index: 5;
 	}
+	.gallery-min,
+	.gallery-max {
+		gap: 10px;
+	}
+	.gallery-min::before {
+		display: none;
+	}
+	.tech__title {
+		font-size: 32px;
+		line-height: 36px;
+	}
+	.footer__title {
+		font-size: 32px;
+		line-height: 38px;
+	}
+	.footer__logo svg {
+		width: 90%;
+	}
 }
 
 @media (max-width: 375px) {
@@ -61,8 +186,4 @@
 		font-size: 55px;
 		line-height: 60px;
 	}
-}
-
-@media (max-width: 320px) {
-	
 }
